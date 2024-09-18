@@ -1,0 +1,467 @@
+/* Importa a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Reseta margens, preenchimentos e configura a caixa de modelo para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define variáveis de cores para uso no design */
+:root {
+    /* Cores primárias */
+    --soft-orange: #E9AB53;
+    --soft-red: #F15E50;
+    
+    /* Cores neutras */
+    --off-white: #FFFDFA;
+    --grayish-blue: #C5C6CE;
+    --dark-grayish-blue: #5D5F79;
+    --very-dark-blue: #00001A;
+}
+
+/* Estilo do corpo da página */
+body {
+    background: var(--off-white);
+    font-family: 'Inter', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    padding: 1.75rem 1rem;
+}
+
+/* Efeito de escurecimento do fundo quando o menu está aberto */
+body.dark:before {
+    content: "";
+    background: rgba(0, 0, 26, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1rem;
+    background-color: var(--off-white);
+    position: relative;
+    max-width: 1110px;
+    margin-inline: auto;
+}
+
+/* Estilo da imagem do logo */
+header img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Estilo do botão do menu */
+header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Menu lateral móvel (para dispositivos móveis) */
+header .mobile {
+    background-color: var(--off-white);
+    position: fixed;
+    right: -16rem;
+    top: 0;
+    height: 100vh;
+    width: 16rem;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    transition: 0.5s;
+}
+
+/* Estado do menu quando está aberto */
+header .mobile.open {
+    right: 0;
+}
+
+/* Estilo dos links no menu móvel */
+header .mobile a {
+    color: var(--very-dark-blue);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+}
+
+/* Estilo do botão de fechamento do menu móvel */
+header .mobile button {
+    align-self: flex-end;
+    margin-bottom: 4rem;
+}
+
+/* Menu de navegação para desktop */
+header .desk {
+    display: none;
+}
+
+/* Estilos principais e layout */
+main {
+    max-width: 1110px;
+    margin-inline: auto;
+}
+
+/* Estilo da primeira seção */
+.first-section {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+}
+
+/* Estilo da imagem no layout da primeira seção */
+.first-section picture {
+    grid-column: 1 / 3;
+}
+
+.first-section img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Estilo do título e parágrafo na primeira seção */
+.first-section h1 {
+    color: var(--very-dark-blue);
+    font-size: 1.5rem; /* Ajuste para dispositivos maiores */
+    line-height: 0.90;
+    margin-bottom: 1rem;
+}
+
+.first-section p {
+    color: var(--dark-grayish-blue);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo do botão na primeira seção */
+.first-section button {
+    background: var(--soft-red);
+    color: var(--off-white);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.275rem;
+    line-height: 1.5rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 5rem;
+    transform: translateX(19rem);
+}
+
+/* Estilo do botão ao passar o mouse */
+.first-section button:hover {
+    background-color: var(--very-dark-blue);
+    transition: 0.3s;
+}
+
+/* Responsividade para dispositivos menores que 700px */
+@media (max-width: 700px) {
+    .first-section {
+        grid-template-columns: 1fr;
+    }
+
+    .first-section picture {
+        grid-column: auto;
+    }
+
+    .first-section img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .first-section h1 {
+        font-size: 1.5rem; /* Ajustado para dispositivos móveis */
+        text-align: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .first-section p {
+        font-size: 0.875rem;
+        text-align: justify;
+        margin: 0 1rem 1.5rem;
+    }
+
+    .first-section button {
+        display: block;
+        margin: 1.5rem auto;
+        width: 100%;
+    }
+}
+
+/* Estilo da segunda seção */
+.second-section {
+    background: var(--very-dark-blue);
+    padding: 1.5rem 1.1rem;
+    margin-bottom: 4rem;
+}
+
+.line-distance {
+    border-bottom: 1px solid var(--grayish-blue);
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+/* Estilo dos itens "em alta" */
+.second-section .em-alta-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.second-section img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo dos títulos e parágrafos na segunda seção */
+.second-section h2 {
+    color: var(--soft-orange);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.second-section h4 {
+    color: var(--off-white);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.second-section p {
+    color: var(--grayish-blue);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
+
+/* Estilo do título ao passar o mouse */
+.second-section h4:hover {
+    color: var(--soft-red);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo da terceira seção */
+.third-section > div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.third-section img {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Estilo do texto na terceira seção */
+.third-section {
+    display: flex;
+    justify-content: space-between; /* Garante espaçamento uniforme entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 1.5rem; /* Espaçamento uniforme entre os itens */
+    padding: 1rem 0; /* Adiciona espaçamento interno */
+    margin-bottom: 2rem; /* Espaçamento abaixo da seção */
+}
+
+.third-section > div {
+    flex: 1; /* Faz com que todos os itens tenham o mesmo tamanho */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espaçamento entre imagem e texto */
+    min-width: 300px; /* Define uma largura mínima para garantir o alinhamento */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura */
+    padding: 1rem; /* Adiciona padding interno aos itens */
+    background: var(--off-white); /* Adiciona um fundo branco para destacar os itens */
+}
+
+.third-section img {
+    width: 110px; /* Define a largura fixa para as imagens */
+    height: 150px; /* Define a altura fixa para as imagens */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+}
+
+.third-section strong {
+    color: var(--grayish-blue);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.third-section h2 {
+    color: var(--very-dark-blue);
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    margin: 0.6rem 0; /* Adiciona margem superior e inferior */
+}
+
+.third-section a {
+    text-decoration: none;
+}
+
+.third-section p {
+    color: var(--dark-grayish-blue);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
+
+/* Estilo do título ao passar o mouse */
+.third-section h2:hover {
+    color: var(--soft-red);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Estilos de responsividade para dispositivos com largura mínima de 1110px */
+@media(min-width: 1110px) {
+    header button {
+        display: none;
+    }
+
+    header .desk {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desk a {
+        color: var(--dark-grayish-blue);
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+    }
+
+    header .desk a:hover {
+        color: var(--soft-red);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .first-section {
+        grid-column: 1 / 3;
+    }
+
+    .first-section img {
+        margin: 0;
+    }
+
+    .first-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .second-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .third-section {
+        display: flex;
+        grid-column: 1 / 4;
+        justify-content: space-between; /* Garante espaçamento uniforme entre os itens */
+    }
+
+    /* Estilo geral da barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: var(--off-white);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0.5rem;
+    max-width: 100%; /* Garante que a barra não ultrapasse o contêiner */
+}
+
+/* Estilo do input de texto */
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--very-dark-blue);
+    border-radius: 4px;
+    flex: 1;
+}
+
+/* Estilo do botão */
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+/* Estilo do ícone do botão */
+.search-container button img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 700px) {
+    .search-container {
+        width: 100%;
+        margin: 0 1rem; /* Adiciona margem para dispositivos móveis */
+    }
+
+    .search-container input[type="text"] {
+        font-size: 0.875rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .search-container button img {
+        width: 1rem; /* Ajusta o tamanho do ícone em telas menores */
+        height: 1rem;
+    }
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 701px) and (max-width: 1110px) {
+    .search-container {
+        width: 80%; /* Ajusta a largura para telas médias */
+        margin: 0 auto; /* Centraliza a barra de pesquisa */
+    }
+
+    .search-container input[type="text"] {
+        font-size: 1rem;
+    }
+
+    .search-container button img {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+/* Responsividade para telas muito grandes */
+@media (min-width: 1110px) {
+    .search-container {
+        width: auto; /* Ajusta a largura para telas grandes */
+        margin: 0; /* Remove margem */
+    }
+}
+}

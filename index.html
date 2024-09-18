@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Conexão com fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link para o JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <!-- Configurações da página -->
+    <title>Cartoon Network News</title>
+    <link rel="icon" href="icons8-cartoon-network-48 (1).png" type="image/png">
+</head>
+<body>
+    <header>
+        <!-- Logo do site -->
+        <img src="https://logos-world.net/wp-content/uploads/2021/08/Cartoon-Network-Logo-2010-present.png" alt="Logo do Cartoon Network">
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">
+        <i class="fa-solid fa-magnifying-glass" style="color:#F15E50;"></i>
+            </button>
+        </div>
+         <div>
+
+        <!-- Botão para abrir o menu móvel -->
+        <button class="menu-toggle">
+            <span class="fa-solid fa-bars"></span> 
+        </button>
+        </div>
+
+        <!-- Menu móvel -->
+        <nav class="mobile">
+            <button class="close-menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#">Início</a>
+            <a href="#">Em alta</a>
+            <a href="#">Categorias</a>
+            <a href="#">Novidades</a>
+            <a href="#">Personagens</a>
+        </nav>
+
+        <!-- Menu para desktop -->
+        <nav class="desktop desk">
+            <a href="#">Início</a>
+            <a href="#">Em alta</a>
+            <a href="#">Categorias</a>
+            <a href="#">Novidades</a>
+            <a href="#">Personagens</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Primeira seção -->
+        <section class="first-section">
+            <picture>
+                <!-- Imagem para telas maiores -->
+                <source media="(min-width:700px)" srcset="https://c4.wallpaperflare.com/wallpaper/109/177/178/movie-scooby-doo-and-the-cyber-chase-wallpaper-preview.jpg">
+                <!-- Imagem padrão -->
+                <img src="https://c4.wallpaperflare.com/wallpaper/109/177/178/movie-scooby-doo-and-the-cyber-chase-wallpaper-preview.jpg" alt="Foto do Scooby-Doo">
+            </picture>
+            <h1>Scooby-Doo Revela: "Sempre soube quem eram os vilões!"</h1>
+            <p>Em entrevista, o cão detetive favorito confessa que esteve um passo à frente da turma o tempo todo. Descubra os segredos que Scooby guardou durante todos esses anos - e como ele resolveu alguns dos casos mais icônicos sem que ninguém percebesse!Com sua astúcia canina e olfato infalível, conseguiu desvendá-los casos intrigantes que deixaram a equipe estupefata. Conheça os segredos escondidos sob sua coleira e as pistas sutis que ele seguiu para resolver mistérios que ninguém mais conseguiu! Mergulhe nos bastidores das investigações mais intrigantes e desvende o enigma por trás do verdadeiro cérebro por trás das aventuras de Mistérios S.A.</p>
+            <button>Ler mais</button>
+        </section>
+
+        <!-- Segunda seção -->
+        <section class="second-section">
+            <h2>Em alta</h2>
+            <div class="em-alta-item">
+                <img src="bem10.jpg" alt="Ben 10">
+                <div>
+                    <h4>Ben 10 Troca Omnitrix por Smartwatch</h4>
+                    <p>"Agora é hora de Fitness". Ben descobre novos aliens enquanto conta seus passos e calorias queimadas.</p>
+                </div>
+            </div>
+            <div class="em-alta-item">
+                <img src="caocovarde.jpeg" alt="imagem do o Cão Covarde">
+                <div>
+                    <h4>Coragem, o Cão Covarde, Abre Empresa de Segurança</h4>
+                    <p>Após anos enfrentando monstros e fantasmas, Coragem decide proteger outros com seus serviços de segurança.</p>
+                </div>
+            </div>
+            <div class="em-alta-item">
+                <img src="https://wallpapercave.com/wp/ZFhnoy0.jpg" alt="Johnny Bravo">
+                <div>
+                    <h4>Johnny Bravo Eleito Presidente da República dos Musculosos</h4>
+                    <p>Com seu charme irresistível e músculos de aço, Johnny promete tornar o mundo um lugar mais "macho".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terceira seção -->
+        <section class="third-section">
+            <div>
+                <img src="https://images5.alphacoders.com/949/thumb-1920-949995.jpg" alt="Imagem do Gumball">
+                <div>
+                    <strong>01</strong>
+                    <h2>Gumball e Darwin Descobrem Portal</h2>
+                    <p>A dupla se encontra em uma dimensão onde tudo é normal!</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://wallpapers.com/images/high/adventure-time-iphone-fkofbowsjzqbgff2.webp" alt="Imagem da Princesa Jujuba">
+                <div>
+                    <strong>02</strong>
+                    <h2>Princesa Jujuba Cria Invenção</h2>
+                    <p>Mas será que a invenção não vai acabar criando novos problemas?</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.justwatch.com/poster/310410860/s166/tom-e-jerry.webp" alt="Imagem do Tom e Jerry">
+                <div>
+                    <strong>03</strong>
+                    <h2>Tom e Jerry Anunciam Trégua</h2>
+                    <p>Após décadas, eles prometem deixar as rivalidades para trás.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Font Awesome para ícones -->
+    <script src="https://kit.fontawesome.com/95bbf1d870.js"></script>
+</body>
+</html>
